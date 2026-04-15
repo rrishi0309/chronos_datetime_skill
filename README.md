@@ -107,8 +107,8 @@ Chronos can be installed four ways, depending on where you want it available.
 For use in [claude.ai](https://claude.ai) conversations (Pro, Max, Team, or
 Enterprise with code execution enabled):
 
-1. Download **[chronos-datetime-skill.zip](https://github.com/rrishi0309/current_datetime_claude_skill/releases/download/v1.0.0/chronos-datetime-skill.zip)**
-   from the [v1.0.0 release](https://github.com/rrishi0309/current_datetime_claude_skill/releases/tag/v1.0.0).
+1. Download **[chronos-datetime-skill.zip](https://github.com/rrishi0309/chronos_datetime_skill/releases/download/v1.0.0/chronos-datetime-skill.zip)**
+   from the [v1.0.0 release](https://github.com/rrishi0309/chronos_datetime_skill/releases/tag/v1.0.0).
 2. In claude.ai, go to **Settings → Features** and upload the zip.
 
 Claude will automatically invoke the skill in any conversation that needs the
@@ -117,16 +117,16 @@ current date or time — no further configuration required.
 To build the zip yourself from a clone:
 
 ```bash
-git clone https://github.com/rrishi0309/current_datetime_claude_skill.git
-cd current_datetime_claude_skill
+git clone https://github.com/rrishi0309/chronos_datetime_skill.git
+cd chronos_datetime_skill
 zip chronos-datetime-skill.zip SKILL.md scripts/get_datetime.sh
 ```
 
 ### Option B — clone the standalone repo (Claude Code)
 
 ```bash
-git clone https://github.com/rrishi0309/current_datetime_claude_skill.git
-cd current_datetime_claude_skill
+git clone https://github.com/rrishi0309/chronos_datetime_skill.git
+cd chronos_datetime_skill
 chmod +x scripts/get_datetime.sh
 ```
 
@@ -165,7 +165,7 @@ time it starts a session in that scope.
 
 | Version | Download | Description |
 | ------- | -------- | ----------- |
-| [v1.0.0](https://github.com/rrishi0309/current_datetime_claude_skill/releases/tag/v1.0.0) | [chronos-datetime-skill.zip](https://github.com/rrishi0309/current_datetime_claude_skill/releases/download/v1.0.0/chronos-datetime-skill.zip) | Pre-packaged zip for claude.ai upload |
+| [v1.0.0](https://github.com/rrishi0309/chronos_datetime_skill/releases/tag/v1.0.0) | [chronos-datetime-skill.zip](https://github.com/rrishi0309/chronos_datetime_skill/releases/download/v1.0.0/chronos-datetime-skill.zip) | Pre-packaged zip for claude.ai upload |
 
 ---
 
@@ -262,11 +262,12 @@ Claude (or you) can call `date(1)` directly:
 As a standalone repository:
 
 ```
-current_datetime_claude_skill/
-├── README.md                this file
-├── SKILL.md                 skill manifest Claude loads
+chronos_datetime_skill/
+├── README.md                         this file
+├── SKILL.md                          skill manifest Claude loads
+├── chronos-datetime-skill.zip        pre-packaged zip for claude.ai
 └── scripts/
-    └── get_datetime.sh      the helper script
+    └── get_datetime.sh               the helper script
 ```
 
 When vendored into a larger project, the conventional location is
